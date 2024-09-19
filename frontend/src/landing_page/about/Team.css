@@ -1,0 +1,43 @@
+/* .image{
+    height:80%;
+    width:90%;
+    border-radius: 90%;
+}
+
+.image{
+    display: inline-block;
+}
+
+@media(max-width : 800px){
+    .content,.image{
+display: flex;
+flex-direction: column;
+    }
+} */
+
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%; 
+}
+
+.image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 100%;
+}
+
+@media (max-width: 800px) {
+    .col-6 {
+        flex: 0 0 100%; 
+        max-width: 100%; 
+    }
+}

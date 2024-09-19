@@ -43,7 +43,7 @@ export default function Signup() {
         body: JSON.stringify(signupInfo),
       });
       const result = await response.json();
-      console.log("debug ", result);
+      // console.log("debug ", result);
       const { success, message, error } = result;
       if (success) {
         handleSuccess(message);

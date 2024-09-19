@@ -77,5 +77,15 @@ border-radius: 5px;
 border: none;
 }
 
-/* login ND singup css */
+/* bootrap hamburger */
+.navbar-toggler {
+margin-left: auto
 
+}
+
+
+.navbar-collapse{
+  display: flex;
+  justify-content: center; 
+  text-align: center; 
+}

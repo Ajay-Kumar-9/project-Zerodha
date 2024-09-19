@@ -10,7 +10,7 @@ function Navbar() {
       <div className="container p-2">
         <Link className="navbar-brand" to={"/"}>
           <img
-            src="media/images/logo.svg"
+            src="media/images/ze_logo.svg"
             alt="Logo"
             style={{ width: "25%" }}
           ></img>
