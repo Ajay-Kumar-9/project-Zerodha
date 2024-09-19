@@ -27,36 +27,47 @@ const signup = async (req, res) => {
 };
 
 
+// const bcrypt = require("bcrypt");
 // const userModel = require("../Model/User");
 // const jwt = require("jsonwebtoken");
+
 // const signup = async (req, res) => {
 //   try {
-//     const { username, email, password } = req.body;
-//     if (!username || !email || !password) {
+//     const { name, email, password } = req.body;
+
+//     // Validate input
+//     if (!name ||  !email ||  !password) {
 //       return res.status(400).json({
 //         message: "All fields are required.",
 //         success: false,
 //       });
 //     }
 
+//     // Check if the user already exists
 //     const user = await userModel.findOne({ email });
 //     if (user) {
 //       return res.status(409).json({
-//         message: "User already exists. You can log in.",
+//         message: "User already exists, you can log in.",
 //         success: false,
 //       });
 //     }
 
-//     const newUser = new userModel({ name, email, password: await bcrypt.hash(password, 10) });
-//     console.log("debug new user" ,newUser);
+//     // Create a new user
+//     const newUser = new userModel({ name, email });
+//     newUser.password = await bcrypt.hash(password, 10); // Hash the password
+
+//     console.log(newUser) //debug
+//     // Save the new user to the database
 //     await newUser.save();
+
 //     res.status(201).json({ message: "Signup successful", success: true });
 //   } catch (err) {
-//     console.log(err); // Log the error for debugging
+//     console.error(err); // Log the error for debugging
 //     res.status(500).json({ message: "Internal server error", success: false });
 //   }
 // };
 
+// module.exports = { signup };
 
 
 

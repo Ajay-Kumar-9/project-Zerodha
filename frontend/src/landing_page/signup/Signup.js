@@ -33,7 +33,7 @@ const navigate = useNavigate();
   // form submit handler
   const handleSignup = async(e)=>{
     e.preventDefault();
-    const {name, email,password} = signupInfo;
+    const {name, email, password} = signupInfo;
 
     
     if(!name || !email || !password){
@@ -49,12 +49,19 @@ const navigate = useNavigate();
         body : JSON.stringify(signupInfo)
       });
       const result = await response.json();
-      const{success , message} = result;
+      console.log("debug " , result);
+      const{success , message ,error} = result;
       if(success){
         handleSuccess(message);
         setTimeout(()=>{
           navigate("/login");
         },1000);
+      } else if(error){
+const details = error?.details[0].message;
+handlError(details);
+      }
+      else if(!success){
+        handlError(message)
       }
       console.log(result);
 
