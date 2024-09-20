@@ -52,6 +52,7 @@ const Holdings = () => {
 
       <div className="order-table">
         <table>
+        <tbody>
           <tr>
             <th>Instrument</th>
             <th>Qty.</th>
@@ -84,7 +85,9 @@ const Holdings = () => {
               </tr>
             );
           })}
+          </tbody>
         </table>
+        
       </div>
 
       <div className="row">

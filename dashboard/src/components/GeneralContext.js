@@ -26,6 +26,7 @@ export const GeneralContextProvider = (props) => {
       value={{
         openBuyWindow: handleOpenBuyWindow,
         closeBuyWindow: handleCloseBuyWindow,
+        selectedStockUID,
       }}
     >
       {props.children}

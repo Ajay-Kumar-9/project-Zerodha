@@ -9,6 +9,7 @@ const Positions = () => {
 
       <div className="order-table">
         <table>
+          <tbody>
           <tr>
             <th>Product</th>
             <th>Instrument</th>
@@ -39,6 +40,7 @@ const Positions = () => {
               </tr>
             );
           })}
+          </tbody>
         </table>
       </div>
     </>
